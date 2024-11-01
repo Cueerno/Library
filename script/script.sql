@@ -1,4 +1,4 @@
-create database library_repository;
+create database library_db;
 
 create table if not exists person(
     id serial primary key,
