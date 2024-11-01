@@ -26,7 +26,7 @@ public class PeopleController {
     @GetMapping("")
     public String index(Model model) {
         model.addAttribute("people", peopleService.findAll());
-        return "/people/index";
+        return "people/index";
     }
 
     @GetMapping("/{id}")
@@ -71,6 +71,6 @@ public class PeopleController {
         if (!surname.equals("")) {
             model.addAttribute("people",  peopleService.searchPeople(surname));
         }
-        return "/people/search";
+        return "people/search";
     }
 }

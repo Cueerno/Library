@@ -40,10 +40,6 @@ public class BookService {
         return bookRepository.findAll(PageRequest.of(page, booksPerPage, Sort.by("year"))).getContent();
     }
 
-    public List<Book> findAllSortedYearBooks() {
-        return bookRepository.findAllByOrderByYearAsc();
-    }
-
     public Book findOne(int id) {
         Optional<Book> foundBook = bookRepository.findById(id);
         return foundBook.orElse(null);

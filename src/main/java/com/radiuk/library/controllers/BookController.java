@@ -40,7 +40,7 @@ public class BookController {
             model.addAttribute("books", bookService.findWithPagination(page, booksPerPage, sortByYear));
         }
 
-        return "/books/index";
+        return "books/index";
     }
 
     @GetMapping("/{id}")
@@ -100,6 +100,6 @@ public class BookController {
         if (!title.equals("")) {
             model.addAttribute("books",  bookService.searchBooks(title));
         }
-        return "/books/search";
+        return "books/search";
     }
 }

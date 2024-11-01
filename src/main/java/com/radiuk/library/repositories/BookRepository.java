@@ -7,8 +7,5 @@ import java.util.List;
 
 public interface BookRepository extends JpaRepository<Book, Integer> {
 
-    List<Book> findAllByOrderByYearAsc();
-
     List<Book> findByTitleStartingWith(String title);
-
 }
