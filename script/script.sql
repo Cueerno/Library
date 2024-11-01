@@ -1,11 +1,13 @@
-create table person(
+create database library_repository;
+
+create table if not exists person(
     id serial primary key,
     name varchar(255) not null,
     surname varchar(255) not null,
     year_of_birth int not null check (year_of_birth > 0)
-)
+);
 
-create table book (
+create table if not exists book(
     id serial primary key,
     title varchar(255) not null,
     author varchar(255) not null,
